@@ -1,17 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-  return 'Hello, World!'
+def student():
+   return render_template('student.html')
 
-@app.route('/hello')
-def hello():
-	return 'Hello Omar'
-
-@app.route('/name/<n>')
-def name(n):
-	return 'Hello {}'.format(n)
+@app.route('/result',methods = ['POST', 'GET'])
+def result():
+   if request.method == 'POST':
+      result = request.form
+      return render_template("result.html",result = result)
 
 if __name__ == '__main__':
-  app.run()
+   app.run(debug = True)
