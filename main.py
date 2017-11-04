@@ -11,5 +11,9 @@ def result():
       result = request.form
       return render_template("result.html",result = result)
 
+@app.route('/hello/<name>')
+def hello(name):
+	return 'Hello {}'.format(name)
+
 if __name__ == '__main__':
    app.run(debug = True)
