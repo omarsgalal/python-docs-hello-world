@@ -9,7 +9,7 @@ def hello_world():
 def hello():
 	return 'Hello Omar'
 
-@app.route('name/<n>')
+@app.route('/name/<n>')
 def name(n):
 	return 'Hello {}'.format(n)
 
