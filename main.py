@@ -8,8 +8,11 @@ def student():
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
    if request.method == 'POST':
-      result = request.form
-      return render_template("result.html",result = result)
+      result = request.args
+      #print (result)
+      print('omar')
+      #return render_template("result.html",result = result)
+      return result
 
 @app.route('/hello/<name>')
 def hello(name):
