@@ -9,10 +9,11 @@ def student():
 def result():
    if request.method == 'POST':
       result = request.args
-      #print (result)
-      print('omar')
       #return render_template("result.html",result = result)
-      return result
+      omar = ''
+      for key, value in result.items():
+      	omar += value + ' '
+      return omar
 
 @app.route('/hello/<name>')
 def hello(name):
