@@ -13,7 +13,7 @@ def result():
       omar = ''
       for key, value in result.items():
       	omar += value + ' '
-      return omar
+      return 'omar'
 
 @app.route('/hello/<name>')
 def hello(name):
