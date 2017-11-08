@@ -9,7 +9,9 @@ def student():
 def result():
    if request.method == 'POST':
       result = request.form
-      return render_template("result.html",result = result)
+      #return render_template("result.html",result = result)
+      omar = dict(result)
+      return str(omar['Age'])
 
 
 @app.route('/hello/<name>')
