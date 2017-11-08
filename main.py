@@ -10,7 +10,7 @@ def result():
    if request.method == 'POST':
       result = request.args
       #return render_template("result.html",result = result)
-      return result.get('Age')
+      return result.get('Age', default=None, type=None)
 
 @app.route('/hello/<name>')
 def hello(name):
