@@ -10,10 +10,7 @@ def result():
    if request.method == 'POST':
       result = request.args
       #return render_template("result.html",result = result)
-      omar = ''
-      for key, value in result.items():
-      	omar += value + ' '
-      return 'omar'
+      return result.get('Age')
 
 @app.route('/hello/<name>')
 def hello(name):
