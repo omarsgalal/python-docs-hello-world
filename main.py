@@ -11,7 +11,7 @@ def result():
       result = request.form
       #return render_template("result.html",result = result)
       omar = dict(result)
-      return str(omar['Age'])
+      return str(omar['Age'][0])
 
 
 @app.route('/hello/<name>')
