@@ -5,7 +5,13 @@ import pypyodbc
 @app.route('/')
 def student():
    #return render_template('student.html')
-   conn = pypyodbc.connect(Trusted_Connection='yes', driver = '{SQL Server}',server = 'LAPTOP-HG7BB9JM' , database = 'WareHubDB')
+   conn = self.conn = pypyodbc.connect(
+    			 r'DRIVER={ODBC Driver 11 for SQL Server};'
+   				 r'SERVER=omarsgalal.database.windows.net;'
+   				 r'DATABASE=WareHubDB;'
+   				 r'UID=omarsgalal;'
+   				 r'PWD=123456Omar'
+    			 )
    return 'omar'
 
 @app.route('/result',methods = ['POST', 'GET'])
