@@ -5,7 +5,7 @@ import pypyodbc
 @app.route('/')
 def student():
    #return render_template('student.html')
-   conn = self.conn = pypyodbc.connect(
+   conn = pypyodbc.connect(
     			 r'DRIVER={ODBC Driver 11 for SQL Server};'
    				 r'SERVER=omarsgalal.database.windows.net;'
    				 r'DATABASE=WareHubDB;'
